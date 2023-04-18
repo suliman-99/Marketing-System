@@ -61,7 +61,7 @@
 
 ## Introduction
 
-this is a tamplate for the open source porjects
+this is just a small marketing app requested for an interview task
 
 ## Tech Stack
 

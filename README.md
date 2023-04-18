@@ -20,8 +20,8 @@
         `suliman-99`,
         `suliman-awad-399a471b8`,
         `sulimanawadstudy@gmail.com`,
-        `open-source-projects-template`,
-        `Open Source Projects Template`,
+        `marketing-system`,
+        `Marketing System`,
 -->
 [![repo-size][repo-size-shield]][repo-url]
 [![forks][forks-shield]][forks-url]
@@ -34,7 +34,7 @@
 
 
 <div align="center">
-<h3>Open Source Projects Template</h3>
+<h3>Marketing System</h3>
 
 [View Demo][demo-url]
     ·
@@ -50,18 +50,12 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Usage](#usage)
-- [Explanation](#explanation)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
 - [Project stucture](#project-stucture)
 - [Contributing](#contributing)
 - [Contact](#contact)
-- [Teammates](#teammates)
-- [Acknowledgments](#acknowledgments)
 - [License](#license)
 
 
@@ -69,58 +63,23 @@
 
 this is a tamplate for the open source porjects
 
-## Features
-
-### Example: 
-
-A few of the things you can do with GitPoint:
-
-* View user activity feed
-* Communicate on your issue and pull request conversations
-* Close or lock issues
-* Apply labels and assignees
-* Review and merge pull requests
-* Create new issues
-* Star, watch and fork repositories
-* Control your unread and participating notifications
-* Easily search for any user or repository
-
 ## Tech Stack
 
 * [![python][python-shield]][python-url]
 * [![django][django-shield]][django-url]
 * [![mysql][mysql-shield]][mysql-url]
-* [![postgresql][postgresql-shield]][postgresql-url]
 * [![restful-api][restful-api-shield]][restful-api-url]
 * [![postman][postman-shield]][postman-url]
 * [![git][git-shield]][git-url]
 * [![github][github-shield]][github-url]
-* [![gitlab][gitlab-shield]][gitlab-url]
 * [![markdown][markdown-shield]][markdown-url]
-* [![dart][dart-shield]][dart-url]
-* [![flutter][flutter-shield]][flutter-url]
-* [![firebase][firebase-shield]][firebase-url]
-* [![html5][html5-shield]][html5-url]
-* [![css3][css3-shield]][css3-url]
-* [![bootstrap][bootstrap-shield]][bootstrap-url]
 * [![vscode][vscode-shield]][vscode-url]
 * [![staruml][staruml-shield]][staruml-url]
-* [![c++][c++-shield]][c++-url]
-* [![java][java-shield]][java-url]
-* [![aws][aws-shield]][aws-url]
 * [![jwt][jwt-shield]][jwt-url]
-* [![oauth][oauth-shield]][oauth-url]
-* [![microservices][microservices-shield]][microservices-url]
-
-## Getting Started
 
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+<!-- ## Prerequisites
 
-### Prerequisites
-
-### Example: 
 
 Make sure you have installed all of the following prerequisites on your development machine:
 * Git - [Download & Install Git][git-downloads-url]. OSX and Linux machines typically have this already installed.
@@ -140,7 +99,7 @@ Make sure you have installed all of the following prerequisites on your developm
     ```
 
 
-### Installation
+## Installation
 
 first open cmd in the place you want to download the project in then write this commands :
 
@@ -151,69 +110,38 @@ git init:
 
 2- Pull the the project into your repo:
 ```
-git pull https://github.com/suliman-99/open-source-projects-template.git
+git pull https://github.com/suliman-99/marketing-system.git
 ```
 
-enjoy it!
+enjoy it! -->
 
-
-### Usage
-
-This Repo is used as a template for the open source projects
-just make a copy of it and change the commented keywords in the first of the file
-
-Use this space to show useful examples of how a project can be used. Additional photos, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-## Explanation
-
-Listing:
-* first
-* seond
-* third
-
-some description...
-
-To do something we use [Topic Name](Tobic explanation link):
-```
-    some code
-```
-Another Topic [Topic2 Name](Tobic2 explanation link) 
-
-some description :
-```
-    some code
-    some code
-    some code
-```
 
 ## Project stucture
 ```
 Project Name
 │   README.md
-└───folder1
-│   │   file11
-│   │
-│   └───folder11
-|       |   file111
-|       |   file112
+└───Django_Backend
+│   │   manage.py
+│   └───Django_Backend
+│   │   
+│   └───Marketing_System
 │   
-└───folder2
-    │   file21
-    │   file22
+└───docs
+    │   ERD.png
+    │   UseCase_Diagram.png
+    │   Marketing_System.mdj
 ```
 
-- `folder path` some description
-- `file path` some description
-
+- `Django_Backend` A Folder Conatain the backend django apps 
+- `Django_Backend/Django_Backend` A Folder Conatain the the settings of the backend project 
+- `Django_Backend/Marketing_System` the one and only app in the backend project
+- `docs` a Folder Contains the diagrams that explain the system requirments 
+- `docs/Marketing_System.mdj` this is the file of the diagrams with StarUML program (windows app)
 
 
 ## Contributing
 
-If you have suggestions for how Open Source Projects Template could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
+If you have suggestions for how Marketing System could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
 
 For more, check out the [Contributing Guide][contributing-url].
 
@@ -222,20 +150,8 @@ For more, check out the [Contributing Guide][contributing-url].
 
 Suliman Awad - [sulimanawadstudy@gmail.com][gmail-url] - [Linkedin][linkedin-account-url]
 
-Project Link: [https://github.com/suliman-99/open-source-projects-template][repo-url]
+Project Link: [https://github.com/suliman-99/marketing-system][repo-url]
 
-
-
-## Teammates
-
-* [Display Name](https://github.com/username)
-* [Display Name 2](https://github.com/username2)
-
-
-## Acknowledgments
-
-* [Display Name](https://github.com/username)
-* [Display Name 2](https://github.com/username2)
 
 ## License
 
@@ -259,15 +175,15 @@ For more, check out the [License File][license-url].
 
 
 <!-- repo urls -->
-[repo-url]: https://github.com/suliman-99/open-source-projects-template
-[contributors-url]: https://github.com/suliman-99/open-source-projects-template/graphs/contributors
-[forks-url]: https://github.com/suliman-99/open-source-projects-template/network/members
-[stars-url]: https://github.com/suliman-99/open-source-projects-template/stargazers
-[issues-url]: https://github.com/suliman-99/open-source-projects-template/issues
+[repo-url]: https://github.com/suliman-99/marketing-system
+[contributors-url]: https://github.com/suliman-99/marketing-system/graphs/contributors
+[forks-url]: https://github.com/suliman-99/marketing-system/network/members
+[stars-url]: https://github.com/suliman-99/marketing-system/stargazers
+[issues-url]: https://github.com/suliman-99/marketing-system/issues
 [license-url]: ./LICENSE
 [contributing-url]: ./CONTRIBUTING.md
 [photo-url]: ./photo.png
-[demo-url]: https://github.com/suliman-99/open-source-projects-template
+[demo-url]: https://github.com/suliman-99/marketing-system
 
 
 <!-- static urls -->
@@ -315,14 +231,14 @@ For more, check out the [License File][license-url].
 
 
 <!-- repo shields -->
-[repo-size-shield]: https://img.shields.io/github/repo-size/suliman-99/open-source-projects-template.svg?label=Repo%20size&style=flat-square
-[forks-shield]: https://img.shields.io/github/forks/suliman-99/open-source-projects-template.svg?&style=flat-square
-[stars-shield]: https://img.shields.io/github/stars/suliman-99/open-source-projects-template.svg?&style=flat-square
-[issues-shield]: https://img.shields.io/github/issues/suliman-99/open-source-projects-template.svg?&style=flat-square
-[contributors-shield]: https://img.shields.io/github/contributors/suliman-99/open-source-projects-template.svg?&style=flat-square
+[repo-size-shield]: https://img.shields.io/github/repo-size/suliman-99/marketing-system.svg?label=Repo%20size&style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/suliman-99/marketing-system.svg?&style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/suliman-99/marketing-system.svg?&style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/suliman-99/marketing-system.svg?&style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/suliman-99/marketing-system.svg?&style=flat-square
 [pr-shield]: https://img.shields.io/badge/PR-Welcome-333333?color=0055bb&style=flat-square
-[hachtoberfest-shield]: https://img.shields.io/github/hacktoberfest/2022/suliman-99/open-source-projects-template
-[license-shield]: https://img.shields.io/github/license/suliman-99/open-source-projects-template.svg?&style=flat-square
+[hachtoberfest-shield]: https://img.shields.io/github/hacktoberfest/2022/suliman-99/marketing-system
+[license-shield]: https://img.shields.io/github/license/suliman-99/marketing-system.svg?&style=flat-square
 
 
 <!-- static shields -->

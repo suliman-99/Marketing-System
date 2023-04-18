@@ -1151,7 +1151,7 @@
 								"$ref": "AAAAAAGHkJv1dezTG9o="
 							},
 							"name": "gender",
-							"type": "VARCHAR",
+							"type": "CHAR",
 							"length": 0
 						},
 						{

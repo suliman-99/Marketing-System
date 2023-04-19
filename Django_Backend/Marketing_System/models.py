@@ -26,11 +26,18 @@ class Product(models.Model):
     title = models.CharField(max_length=255)
     type = models.CharField(max_length=255)
     description = models.TextField()
-    marketers = models.ManyToManyField(Marketer, related_name='products')
+    marketers = models.ManyToManyField(Marketer, related_name='products', through='MarketerProduct')
 
     def __str__(self):
         return f'{self.id} - {self.title} ({self.type})'
 
-Product.marketers.through._meta.verbose_name = 'Sell'
-Product.marketers.through._meta.verbose_name_plural  = 'Sales'
+class MarketerProduct(models.Model):
+    class Meta:
+        verbose_name = 'Sell'
+        verbose_name_plural  = 'Sales'
+        unique_together = ('marketer', 'product',)
+        
+    marketer = models.ForeignKey(Marketer, on_delete=models.CASCADE,  related_name='marketer_product')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,  related_name='marketer_product')
 
+    

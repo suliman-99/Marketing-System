@@ -4,7 +4,7 @@ from django.db.models.query import QuerySet
 
 
 class MarketerProductInline(admin.TabularInline):
-    model = Product.marketers.through
+    model = MarketerProduct
     classes = ['collapse']
     extra = 0
 
@@ -117,7 +117,7 @@ class MarketerAdmin(admin.ModelAdmin):
 # --------------------------------------------------------------------------
 
 class ProductMarketerInline(admin.TabularInline):
-    model = Product.marketers.through
+    model = MarketerProduct
     classes = ['collapse']
     extra = 0
 
@@ -146,7 +146,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 # --------------------------------------------------------------------------
 
-@admin.register(Product.marketers.through)
+@admin.register(MarketerProduct)
 class MarketerProductAdmin(admin.ModelAdmin):
     actions = ['sell']
 

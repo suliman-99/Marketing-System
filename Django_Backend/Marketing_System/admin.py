@@ -1,5 +1,6 @@
-from django.contrib import admin
+from django.contrib import admin, messages
 from .froms import *
+from django.db.models.query import QuerySet
 
 
 class MarketerProductInline(admin.TabularInline):
@@ -147,6 +148,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Product.marketers.through)
 class MarketerProductAdmin(admin.ModelAdmin):
+    actions = ['sell']
 
     list_display = ['id', 'marketer', 'product']
     list_display_links = ['id']
@@ -155,6 +157,28 @@ class MarketerProductAdmin(admin.ModelAdmin):
     search_fields = ['marketer__user__username', 'marketer__user__first_name', 'marketer__user__last_name', 
                      'marketer__user__email', 'marketer__reference_link', 
                      'product__title', 'product__type', 'product__description']
+    
+    @admin.action(description='Sell and delete')
+    def sell(self, request, queryset: QuerySet):
+        count = len(list(queryset))
+        if count != 1:
+            self.message_user(
+                request,
+                'Can\'t Sell more than 1 product in the same time',
+                messages.ERROR,
+            )
+        else:
+            obj = queryset.first()
+            marketer = obj.marketer
+            product = obj.product
+            marketer.balance += marketer.commission*product.price
+            product.delete()
+            marketer.save()
+            self.message_user(
+                request,
+                'Can\'t Sell more than 1 product in the same time',
+                messages.SUCCESS,
+            )
 
 
 

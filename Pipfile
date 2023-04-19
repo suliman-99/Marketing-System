@@ -11,6 +11,7 @@ djangorestframework = "*"
 django-debug-toolbar = "*"
 python-decouple = "*"
 mysqlclient = "*"
+drf-nested-routers = "*"
 
 [dev-packages]
 

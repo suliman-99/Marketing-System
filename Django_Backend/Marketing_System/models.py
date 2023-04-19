@@ -12,9 +12,9 @@ class Marketer(models.Model):
     ]
 
     user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
-    balance = models.PositiveIntegerField(default=0)
+    balance = models.DecimalField(max_digits=18, decimal_places=2, default=0)
     withdrawal_threshold = models.PositiveIntegerField()
-    commission = models.DecimalField(max_digits=3, decimal_places=2)
+    commission = models.DecimalField(max_digits=2, decimal_places=2)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     reference_link = models.CharField(max_length=255)
 

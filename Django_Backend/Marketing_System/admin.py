@@ -3,6 +3,9 @@ from .froms import *
 from django.db.models.query import QuerySet
 
 
+admin.site.site_header = 'Marketing System Admin'
+admin.site.index_title = 'Main Page'
+
 class MarketerProductInline(admin.TabularInline):
     model = MarketerProduct
     classes = ['collapse']

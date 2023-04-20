@@ -119,9 +119,12 @@ first open cmd in the place you want to download the project in then write this 
     pipenv install
     ```
 
-5. Create the .env file:
-    Create a file with ".env" name without quotes 
-    and put in it this data as below
+5. Activate the pipenv:
+    ```
+    pipenv shell
+    ```
+
+6. Create the .env file in "Marketing-System/Django_Backend" folder with this data:
     ```
     SECRET_KEY = 'You can get this key by https://djecrety.ir/'
     DATABASE_NAME = 'create a database and put its name here'
@@ -130,7 +133,7 @@ first open cmd in the place you want to download the project in then write this 
     DATABASE_PASSWORD = 'user password'
     ```
 
-6. Run the project:
+7. Migrate the database tables and Run the project:
 
     * Windows:
         ```

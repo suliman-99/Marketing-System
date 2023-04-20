@@ -63,6 +63,9 @@
 
 this is just a small marketing app requested for an interview task
 
+API Documentation Can Be Found on the blank url after the domain
+'http://127.0.0.1:8000/'
+
 ## Tech Stack
 
 * [![python][python-shield]][python-url]

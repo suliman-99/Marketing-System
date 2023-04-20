@@ -78,13 +78,13 @@ this is just a small marketing app requested for an interview task
 * [![jwt][jwt-shield]][jwt-url]
 
 
-<!-- ## Prerequisites
+## Prerequisites
 
 
 Make sure you have installed all of the following prerequisites on your development machine:
 * Git - [Download & Install Git][git-downloads-url]. OSX and Linux machines typically have this already installed.
 * Python - [Download & Install Python][python-downloads-url]
-* MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads), and make sure it's running on the default port (27017).
+* MySQL - [Download & Install MySQL](https://www.mysql.com/downloads/)
 
 * pipenv module:
 
@@ -93,28 +93,56 @@ Make sure you have installed all of the following prerequisites on your developm
     ```
         pip --version
     ```
-    then to install pipenv module by pip just write this command on your cmd
-    ```
-        pip install pipenv
-    ```
 
 
 ## Installation
 
 first open cmd in the place you want to download the project in then write this commands :
 
-1- make a git reop:
-```
-git init:
-```
+1. Clone the repository to your local machine:
+    ```
+    git clone https://github.com/suliman-99/marketing-system.git
+    ```
 
-2- Pull the the project into your repo:
-```
-git pull https://github.com/suliman-99/marketing-system.git
-```
+2. Navigate to the project directory:
+    ```
+    cd Marketing-System/Django_Backend
+    ```
 
-enjoy it! -->
+3. then to install pipenv module by pip just write this command on your cmd
+    ```
+    pip install pipenv
+    ```
 
+4. Install the required dependencies using pipenv:
+    ```
+    pipenv install
+    ```
+
+5. Create the .env file:
+    Create a file with ".env" name without quotes 
+    and put in it this data as below
+    ```
+    SECRET_KEY = 'You can get this key by https://djecrety.ir/'
+    DATABASE_NAME = 'create a database and put its name here'
+    DATABASE_HOST = 'localhost'
+    DATABASE_USER = 'user'
+    DATABASE_PASSWORD = 'user password'
+    ```
+
+6. Run the project:
+
+    * Windows:
+        ```
+        python manage.py migrate
+        python manage.py runserver
+        ```
+
+    * Linux or Mac:
+        ```
+        python3 manage.py migrate
+        python3 manage.py runserver
+        ```
 
 ## Project stucture
 ```

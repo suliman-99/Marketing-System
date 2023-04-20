@@ -30,18 +30,5 @@ marketer_router.register(
 
 # --------------------------------------------------------------------------
 
-product_router = routers.NestedDefaultRouter(
-    router,
-    'products',
-    lookup='product'
-)
 
-product_router.register(
-    'marketers',
-    ProductMarketerViewSet,
-    basename='product-marketers'
-)
-
-# --------------------------------------------------------------------------
-
-urlpatterns = router.urls + marketer_router.urls + product_router.urls
+urlpatterns = router.urls + marketer_router.urls 

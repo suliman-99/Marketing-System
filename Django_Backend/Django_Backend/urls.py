@@ -16,7 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
+from rest_framework.schemas import get_schema_view
+from django.views.generic import TemplateView
 
+
+schema_view = get_schema_view(
+    title="API Schema", description="Guide for the REST API")
+
+swagger_view = TemplateView.as_view(
+    template_name="Swagger.html", extra_context={"schema_url": "api_schema"}
+)
 
 app_patterns = [
     path('marketing-system/', include('Marketing_System.urls')),
@@ -26,6 +35,8 @@ app_patterns = [
 urlpatterns = [
     re_path(r'^auth/', include('djoser.urls.jwt')),
     re_path(r'^auth/', include('djoser.urls')),
+    path('api_schema/', schema_view, name='api_schema'),
+    path('', swagger_view, name='swagger-ui'),
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
     path('api/', include(app_patterns)),

@@ -1,6 +1,7 @@
 from django.contrib import admin, messages
 from .froms import *
 from django.db.models.query import QuerySet
+from django.utils.html import format_html
 
 
 admin.site.site_header = 'Marketing System Admin'
@@ -14,9 +15,9 @@ class MarketerProductInline(admin.TabularInline):
 @admin.register(Marketer)
 class MarketerAdmin(admin.ModelAdmin):
     inlines = [MarketerProductInline]
-    readonly_fields = ['id', 'balance', 'can_withdraw', 'last_login', 'date_joined']
+    readonly_fields = ['id', 'colored_balance', 'can_withdraw', 'last_login', 'date_joined']
 
-    list_display = ['id', 'username', 'gender', 'balance', 'can_withdraw', 'withdrawal_threshold', 'commission']
+    list_display = ['id', 'username', 'gender', 'colored_balance', 'can_withdraw', 'withdrawal_threshold', 'commission']
     list_display_links = ['id', 'username']
     ordering = ['user_id']
     list_filter = ['gender']
@@ -56,7 +57,7 @@ class MarketerAdmin(admin.ModelAdmin):
                  'fields': (
                     "id",
                     "username",
-                    "balance", 
+                    "colored_balance", 
                     "can_withdraw",
                     ("withdrawal_threshold", "commission"),
                     ("first_name", "last_name"),
@@ -116,6 +117,16 @@ class MarketerAdmin(admin.ModelAdmin):
 
     def can_withdraw(self, marketer: Marketer):
         return marketer.balance >= marketer.withdrawal_threshold
+
+    def colored_balance(self, marketer: Marketer):
+        color = '000000'
+        if marketer.balance >= marketer.withdrawal_threshold:
+            color = '8B0000'
+        return format_html(
+            '<b style="color: #{};">{}</b>',
+            color,
+            marketer.balance,
+        )
 
 # --------------------------------------------------------------------------
 
